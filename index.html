@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,11 +9,17 @@
 </head>
 
 <body>
-    <!-- Section One  -->
+
+    <div class="toggle">
+        <input type="checkbox" id="demo" onChange="toggleDocument()">
+        <label for="demo"></label>
+    </div>
+
     <!-- Section One  -->
     <section>
         <p>Parallax Website</p>
     </section>
+
     <!-- Section Two  -->
     <section>
         <h2>Lorem two</h2>
@@ -23,10 +30,12 @@
             Laborum ad temporibus ex, omnis!
         </p>
     </section>
+
     <!-- Section Three  -->
     <section>
         <p>Ipsum Three</p>
     </section>
+
     <!-- Section Four  -->
     <section>
         <h2>Dolor Four</h2>
@@ -36,10 +45,12 @@
             voluptatem doloremque fugiat dolor repellendus ratione in.
         </p>
     </section>
+
     <!-- Section Five  -->
     <section>
         <p>Sit Five</p>
     </section>
+
     <!-- Section Six  -->
     <section>
         <h2>Amet Six</h2>
@@ -49,11 +60,20 @@
             voluptatem doloremque fugiat dolor repellendus ratione in.
         </p>
     </section>
+
     <!-- Section Seven  -->
     <section>
         <p>Clarusway FullStack Team</p>
     </section>
-
+    <script>
+        function toggleDocument() {
+            var elements = document.querySelectorAll("section, section p");
+            var i;
+            for (i = 0; i < elements.length; i++) {
+                elements[i].classList.toggle("section-dark")
+            }
+        }
+    </script>
 </body>
 
 </html>
